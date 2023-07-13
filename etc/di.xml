@@ -1,0 +1,30 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <!-- GDW Faqs Category -->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="gdw_faqs_category_listing_data_source" xsi:type="string">GDW\Faqs\Model\ResourceModel\FaqCategory\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="GDW\Faqs\Model\ResourceModel\FaqCategory\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">gdw_faqs_category</argument>
+            <argument name="resourceModel" xsi:type="string">GDW\Faqs\Model\ResourceModel\FaqCategory</argument>
+        </arguments>
+    </virtualType>
+
+    <!-- GDW Faqs Items-->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="gdw_faqs_items_listing_data_source" xsi:type="string">GDW\Faqs\Model\ResourceModel\Faq\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!-- Render Tab in frontend -->
+    <type name="Magento\Catalog\Block\Product\View\Details">
+        <plugin name="gdw_product_tab_faqs" type="GDW\Faqs\Plugin\ProductFaqs" />
+    </type>
+</config>
