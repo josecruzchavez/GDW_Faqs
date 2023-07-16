@@ -6,10 +6,6 @@ use Magento\Framework\App\RequestInterface;
 use Magento\Framework\Data\OptionSourceInterface;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory as ProductCollectionFactory;
 
-
-/**
- * Options tree for "Customers" field
- */
 class Products implements OptionSourceInterface
 {
     protected $request;

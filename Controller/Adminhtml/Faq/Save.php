@@ -18,7 +18,7 @@ class Save extends \GDW\Faqs\Controller\Adminhtml\Faq\AbstractData
             $newItem->setData($data);
             $newItem->save();
             if($newItem){
-                $this->messageManager->addSuccessMessage(__('The answer to the question was saved successfully'));
+                $this->messageManager->addSuccessMessage(__('FAQ was saved successfully'));
                 return $rRedirect->setPath('*/*/edit', ['id' => $newItem->getId(), '_current' => true]);
             }else{
                 $this->messageManager->addException($e, __('An error has occurred'));
@@ -34,13 +34,13 @@ class Save extends \GDW\Faqs\Controller\Adminhtml\Faq\AbstractData
                 $newData = $this->faqRepository->load($data['id']);
                 $newData->setData($data);
                 $newData->save();
-                $this->messageManager->addSuccessMessage(__('The answer to the question was successfully updated'));
+                $this->messageManager->addSuccessMessage(__('FAQ was successfully updated'));
             } catch (\Exception $e) {
                 $this->messageManager->addException($e, __('An error has occurred'));
             }
             return $rRedirect->setPath('*/*/edit', ['id' => $data['id'], '_current' => true]);
         }else{
-            $this->messageManager->addErrorMessage(__('Question Id not found'));
+            $this->messageManager->addErrorMessage(__('FAQ Id not found'));
             return $rRedirect->setPath('*/grid/faq/');
         }
 

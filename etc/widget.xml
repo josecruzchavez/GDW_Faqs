@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Widget/etc/widget.xsd">
     <widget class="GDW\Faqs\Block\Widget\WidgetFaqs" id="gdw_faqs_widget">
-        <label>GDW Faqs</label>
-        <description>Show Faqs Anywhere</description>
+        <label>GDW FAQs</label>
+        <description>Display FAQs Anywhere</description>
         <parameters>
             <parameter name="type_display" xsi:type="select" visible="true" sort_order="1">
                 <label translate="true">Type</label>
@@ -14,7 +14,7 @@
                         <label translate="true">Other Product</label>
                     </option>
                     <option name="faq_category" value="faq_category">
-                        <label translate="true">Faqs category</label>
+                        <label translate="true">FAQs Category</label>
                     </option>
                 </options>
             </parameter>
@@ -27,8 +27,8 @@
             </parameter>
             
             <parameter name="faq_category_id" xsi:type="text" visible="true" sort_order="3">
-                <label translate="true">ID of Category Faqs</label>
-                <description>If Category Faq is disable, it won't display</description>
+                <label translate="true">ID of FAQ Category</label>
+                <description>If FAQ Category is disable, it won't display</description>
                 <depends>
                     <parameter name="type_display" value="faq_category"/>
                 </depends>

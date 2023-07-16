@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Inova_Faq::grid" title="Products Faqs" module="GDW_Faqs" sortOrder="100" resource="Inova_Faq::grid" parent="Magento_Catalog::catalog"/>
-        <add id="Inova_Faq::grid_faqs" title="Products Faqs Items" module="GDW_Faqs" sortOrder="101" action="gdw_faqs/grid/faq" resource="Inova_Faq::grid_faqs" parent="Inova_Faq::grid"/>
-        <add id="Inova_Faq::grid_category_faqs" title="Products Faqs Category" module="GDW_Faqs" sortOrder="102" action="gdw_faqs/grid/category" resource="Inova_Faq::grid_category" parent="Inova_Faq::grid"/>
+        <add id="GDW_Faq::grid" title="FAQs" module="GDW_Faqs" sortOrder="100" resource="GDW_Faq::grid" parent="Magento_Catalog::catalog"/>
+        <add id="GDW_Faq::grid_faqs" title="FAQs Items" module="GDW_Faqs" sortOrder="101" action="gdw_faqs/grid/faq" resource="GDW_Faq::grid_faqs" parent="GDW_Faq::grid"/>
+        <add id="GDW_Faq::grid_category_faqs" title="FAQs Category" module="GDW_Faqs" sortOrder="102" action="gdw_faqs/grid/category" resource="GDW_Faq::grid_category" parent="GDW_Faq::grid"/>
     </menu>
 </config>

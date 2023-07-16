@@ -1,17 +1,23 @@
+![gdw_faqs](https://php.gdw.mx/github_assets/gdw_faqs/gdw_faqs_01.jpg)
+
 # GDW FAQs para Magento 2
-Este módulo tiene la finalidad de agregar Preguntas frecuentes a magento 2.
+
+[![Latest Stable Version](http://poser.pugx.org/gdw/faqs/v?style=for-the-badge)](https://packagist.org/packages/gdw/faqs) [![Total Downloads](http://poser.pugx.org/gdw/faqs/downloads?style=for-the-badge)](https://packagist.org/packages/gdw/faqs) [![PHP Version Require](http://poser.pugx.org/gdw/faqs/require/php?style=for-the-badge)](https://packagist.org/packages/gdw/faqs)
+
+Este módulo tiene la finalidad de agregar Preguntas frecuentes (FAQs) a Magento 2.
+
 ## Compatibilidad
 ✓ Magento 2.3.x, ✓ Magento 2.4.x
 
 
 ## Funciones destacadas
-* Agregar preguntas frecuentes a cada producto.
+* Agregar preguntas frecuentes FAQs a cada producto.
 * Schema FAQs creados automáticamente.
 * Compatible con multitiendas.
 * Se pueden agrupar FAQs y mostrar en donde sea.
 * Se puede agregar una tab en la vista detalle de producto.
 * Widget para visualizar FAQs en donde sea.
-* 3 diseños sencillos.
+* 3 diseños.
 * Módulo gratuito.
 <br/>
 

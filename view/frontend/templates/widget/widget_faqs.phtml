@@ -1,16 +1,15 @@
-<?php $hasFaqs = $block->hasFaqs();
+<?php
+if($block->hasFaqs()): $faqs = $block->getFaqs(); ?>
 
-if($hasFaqs): $faqs = $block->getFaqs(); ?>
-
-<section class="question-wrapper <?= 'widget_'.$block->getTypeDisplay()?> <?= $block->getStyle()?>" itemscope itemtype="https://schema.org/FAQPage">
-    <?php foreach($faqs as $faq): ?>
-        <div class="question-body" data-ident="<?= $faq->getIdent() ?? 'ask-'.$faq->getId().'-'.$faq->getOrder(); ?>" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <div class="question-title" itemprop="name"><?= $faq->getFaq();?></div>
-            <div class="question-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                <div itemprop="text"><?= $block->getHtmlVal($faq->getAnswer());?></div>
+    <section class="question-wrapper <?= 'widget_'.$block->getTypeDisplay()?> <?= $block->getStyle()?>" itemscope itemtype="https://schema.org/FAQPage">
+        <?php foreach($faqs as $faq): ?>
+            <div class="question-body" data-ident="<?= $faq->getIdent() ?? 'ask-'.$faq->getId(); ?>" data-faqorder="<?= $faq->getOrder() ?? 0;?>" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="question-title" itemprop="name"><?= $faq->getFaq();?></div>
+                <div class="question-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div itemprop="text"><?= $block->getHtmlVal($faq->getAnswer());?></div>
+                </div>
             </div>
-        </div>
-    <?php endforeach; ?>
-</section>
+        <?php endforeach; ?>
+    </section>
 
 <?php endif; ?>

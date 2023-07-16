@@ -6,7 +6,7 @@
             <item name="deps" xsi:type="string">gdw_faqs_items_form_create.faqs_items_form_data_source</item>
         </item>
 
-        <item name="label" xsi:type="string" translate="true">Ask Data</item>
+        <item name="label" xsi:type="string" translate="true">FAQ Data</item>
         
         <item name="config" xsi:type="array">
             <item name="dataScope" xsi:type="string">data</item>
@@ -45,7 +45,7 @@
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">
                 <item name="collapsible" xsi:type="boolean">false</item>
-                <item name="label" xsi:type="string" translate="true">Ask Data</item>
+                <item name="label" xsi:type="string" translate="true">FAQ Data</item>
                 <item name="sortOrder" xsi:type="number">20</item>
             </item>
         </argument>
@@ -79,7 +79,7 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true"># Order</item>
+                    <item name="label" xsi:type="string" translate="true">Order</item>
                     <item name="formElement" xsi:type="string">input</item>
                     <item name="source" xsi:type="string">faq</item>
                     <item name="dataScope" xsi:type="string">order</item>
@@ -140,7 +140,7 @@
             </argument>
             <settings>
                 <elementTmpl>ui/grid/filters/elements/ui-select</elementTmpl>
-                <label translate="true">Select Category Faq</label>
+                <label translate="true">Select FAQ Category</label>
                 <dataScope>category_faq_id</dataScope>
                 <componentType>field</componentType>
                 <listens>
@@ -168,7 +168,7 @@
                     <item name="validation" xsi:type="array">
                         <item name="required-entry" xsi:type="boolean">false</item>
                     </item>
-                    <item name="notice" xsi:type="string" translate="true">Add custom string to 'data-ident' attribute in faq body</item>
+                    <item name="notice" xsi:type="string" translate="true">Add custom string to 'data-ident' attribute in FAQ body</item>
                 </item>
             </argument>
         </field>

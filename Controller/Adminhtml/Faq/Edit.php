@@ -11,7 +11,7 @@ class Edit extends \GDW\Faqs\Controller\Adminhtml\Faq\AbstractData
         $rRedirect = $this->resultRedirectFactory->create();
 
         if ($dataId === null) {
-            $this->messageManager->addErrorMessage(__('No se encontró el Id de la pregunta'));
+            $this->messageManager->addErrorMessage(__('FAQ Id not found'));
             return $rRedirect->setPath('*/grid/faq/');
         } else {
             $resultPage->addBreadcrumb(__('Edit Data'), __('Edit Data'));

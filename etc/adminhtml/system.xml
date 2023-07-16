@@ -3,19 +3,19 @@
     <system>
         <section id="gdwcatalog" type="text" translate="label" sortOrder="910" showInDefault="1" showInWebsite="1" showInStore="1">
             <group id="gdwcoreabout" type="text" translate="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Acerca de</label>
+                <label>About</label>
                 <frontend_model>GDW\Core\Block\Adminhtml\System\Core\GlobalAds</frontend_model>
             </group>
             
             <group id="faqs" type="text" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>Faqs</label>
+                <label>FAQs</label>
                 <field id="show_tab" translate="label" type="select" sortOrder="1"  showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Display Faqs in Tab?</label>
+                    <label>Display FAQs in Tab?</label>
                     <config_path>gdw/catalog_faqs/show_tab</config_path>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model> 
                     <comment><![CDATA[
-                        It's possible to display faqs by widget anywhere.<br/>
-                        If current product don't have faqs, tab no display.
+                        It's possible to display FAQs by widget anywhere.<br/>
+                        If current product don't have FAQs, tab no display.
                     ]]></comment>
                 </field>
                 <field id="tab_title" translate="label" type="text"  sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -23,7 +23,7 @@
                     <config_path>gdw/catalog_faqs/tab_title</config_path>
                 </field>
                 <field id="tab_style" translate="label" type="select" sortOrder="3"  showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>add style for faqs?</label>
+                    <label>Add style for faqs?</label>
                     <config_path>gdw/catalog_faqs/tab_style</config_path>
                     <source_model>GDW\Faqs\Model\Config\Styles</source_model>
                 </field>
@@ -31,7 +31,7 @@
         </section>
         <section id="gdwcoremodulelist">
             <group id="gdwfaqspath" translate="label" type="text" sortOrder="96" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>GDW Faqs</label>
+                <label>GDW FAQs</label>
                 <field id="gdwfaqsfieldinfo" type="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                     <frontend_model>GDW\Faqs\Block\Adminhtml\System\ModuleInfoFull</frontend_model>
                 </field>

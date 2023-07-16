@@ -1,10 +1,9 @@
 <?php
 if (!empty($block->getJsLayout())) {
-    $jsLayout = \Zend_Json::decode($block->getJsLayout());
+    $jsLayout = json_decode($block->getJsLayout(),true);
     foreach ($jsLayout as $layout) {
         if (isset($layout['type']) && 'template' === $layout['type'] && isset($layout['data'])){
-            echo $this->getLayout()->createBlock($layout['data']['type'])
-                ->setDisplayType($layout['data']['name'])->setTemplate($layout['data']['template'])->toHtml();
+            echo $this->getLayout()->createBlock($layout['data']['type'])->setDisplayType($layout['data']['name'])->setTemplate($layout['data']['template'])->toHtml();
         }
     }
 }

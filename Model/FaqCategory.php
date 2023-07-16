@@ -69,9 +69,4 @@ class FaqCategory extends AbstractModel implements FaqCategoryInterface, Identit
         return $this->load($category_id);
     }
 
-    public function getByProduct($product_id)
-    {
-        /**/
-        return false;
-    }
 }

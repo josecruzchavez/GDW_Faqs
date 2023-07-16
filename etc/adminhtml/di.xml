@@ -3,7 +3,7 @@
     <virtualType name="Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\Pool">
         <arguments>
             <argument name="modifiers" xsi:type="array">
-                <item name="rgdw-faq" xsi:type="array">
+                <item name="gdw-faq" xsi:type="array">
                     <item name="class" xsi:type="string">GDW\Faqs\Ui\DataProvider\Product\Form\Modifier\FaqsFieldset</item>
                     <item name="sortOrder" xsi:type="number">80</item>
                 </item>

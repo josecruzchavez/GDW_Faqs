@@ -15,7 +15,7 @@ class Save extends \GDW\Faqs\Controller\Adminhtml\FaqCategory\AbstractData
             $newItem->setData($data);
             $newItem->save();
             if($newItem){
-                $this->messageManager->addSuccessMessage(__('The category was saved successfully'));
+                $this->messageManager->addSuccessMessage(__('FAQ Category was saved successfully'));
                 return $rRedirect->setPath('*/*/edit', ['category_id' => $newItem->getCategoryId(), '_current' => true]);
             }else{
                 $this->messageManager->addException($e, __('An error has occurred'));
@@ -28,13 +28,13 @@ class Save extends \GDW\Faqs\Controller\Adminhtml\FaqCategory\AbstractData
                 $newData = $this->faqCategoryRepository->load($data['category_id']);
                 $newData->setData($data);
                 $newData->save();
-                $this->messageManager->addSuccessMessage(__('The category was successfully updated'));
+                $this->messageManager->addSuccessMessage(__('FAQ Category was successfully updated'));
             } catch (\Exception $e) {
                 $this->messageManager->addException($e, __('An error has occurred'));
             }
             return $rRedirect->setPath('*/*/edit', ['category_id' => $data['category_id'], '_current' => true]);
         }else{
-            $this->messageManager->addErrorMessage(__('Category Id not found'));
+            $this->messageManager->addErrorMessage(__('FAQ Category Id not found'));
             return $rRedirect->setPath('*/grid/category');
         }
 

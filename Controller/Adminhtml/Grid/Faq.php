@@ -20,7 +20,7 @@ class Faq extends \Magento\Backend\App\Action
     public function execute()
     {        
         $resultPage = $this->pageFactory->create();
-		$resultPage->getConfig()->getTitle()->prepend((__('Faqs Items')));
+		$resultPage->getConfig()->getTitle()->prepend((__('FAQs Items')));
 		return $resultPage;
     }
 }

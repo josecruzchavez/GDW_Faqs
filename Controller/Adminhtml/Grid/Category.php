@@ -23,7 +23,7 @@ class Category extends \Magento\Backend\App\Action
     public function execute()
     {
         $resultPage = $this->pageFactory->create();
-		$resultPage->getConfig()->getTitle()->prepend((__('Faqs Category')));
+		$resultPage->getConfig()->getTitle()->prepend((__('FAQ Category')));
 		return $resultPage;
     }
 }

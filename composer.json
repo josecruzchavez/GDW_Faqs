@@ -2,7 +2,7 @@
   "name": "gdw/faqs",
   "description": "FAQs for Magento 2",
   "type": "magento2-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "proprietary",
   "authors": [
     {
@@ -18,10 +18,10 @@
   },
   "minimum-stability": "dev",
   "keywords": [
-    "faqs",
+    "fAQs",
     "free",
     "magento",
-    "magento 2",
+    "magento2",
     "tab",
     "accordion", 
     "products",
@@ -29,6 +29,8 @@
     "Frequently",
     "Asked",
     "Questions",
+    "schema",
+    "SEO",
     "gestion digital web",
     "gdw",
     "jcruz"

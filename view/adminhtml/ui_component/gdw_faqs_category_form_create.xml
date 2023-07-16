@@ -5,7 +5,7 @@
             <item name="provider" xsi:type="string">gdw_faqs_category_form_create.faq_category_form_data_source</item>
             <item name="deps" xsi:type="string">gdw_faqs_category_form_create.faq_category_form_data_source</item>
         </item>
-        <item name="label" xsi:type="string" translate="true">Datos de Pregunta</item>
+        <item name="label" xsi:type="string" translate="true">FAQ Category Data</item>
         <item name="config" xsi:type="array">
             <item name="dataScope" xsi:type="string">data</item>
             <item name="namespace" xsi:type="string">gdw_faqs_category_form_create</item>
@@ -41,7 +41,7 @@
         <argument name="data" xsi:type="array">
             <item name="config" xsi:type="array">
                 <item name="collapsible" xsi:type="boolean">false</item>
-                <item name="label" xsi:type="string" translate="true">Faq Category data</item>
+                <item name="label" xsi:type="string" translate="true">FAQ Category Data</item>
                 <item name="sortOrder" xsi:type="number">20</item>
             </item>
         </argument>

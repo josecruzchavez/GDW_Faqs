@@ -13,13 +13,13 @@ class Delete extends \GDW\Faqs\Controller\Adminhtml\FaqCategory\AbstractData
             try {
                 $newData = $this->faqCategoryRepository->load($data['category_id']);
                 $newData->delete();
-                $this->messageManager->addSuccessMessage(__('La categoría se eliminó correctamente'));
+                $this->messageManager->addSuccessMessage(__('The FAQ Category was correctly deleted'));
             } catch (\Exception $e) {
-                $this->messageManager->addException($e, __('Ocurrió un error'));
+                $this->messageManager->addException($e, __('An error occurred'));
             }
             return $rRedirect->setPath('*/grid/category');
         }else{
-            $this->messageManager->addErrorMessage(__('No se encontró el Id de la categoría'));
+            $this->messageManager->addErrorMessage(__('FAQ Category Id not found'));
             return $rRedirect->setPath('*/grid/category');
         }
         

@@ -63,7 +63,7 @@ class FaqsFieldset extends AbstractModifier
             'arguments' => [
                 'data' => [
                     'config' => [
-                        'label' => __('Product Faqs'),
+                        'label' => __('Product FAQs'),
                         'componentType' => Fieldset::NAME,
                         'dataScope' => static::DATA_SCOPE_PRODUCT,
                         'provider' => static::DATA_SCOPE_PRODUCT . '_data_source',
@@ -103,13 +103,13 @@ class FaqsFieldset extends AbstractModifier
 
     public function renderFaqs()
     {
-        $html = 'Without Faqs.';
+        $html = 'Without FAQs.';
         $hasFaqs = $this->faqsHelper->hasAllFaqsCurrentProduct();
         if($hasFaqs){
             $faqs = $this->faqsHelper->getAllFaqsCurrentProduct();
             $html = '<table class="data-grid"><thead><tr>';
             $html .= '<th class="data-grid-th"><span>Order</span></th>';
-            $html .= '<th class="data-grid-th"><span>Faq</span></th>';
+            $html .= '<th class="data-grid-th"><span>FAQ</span></th>';
             $html .= '<th class="data-grid-th"><span>Status</span></th>';
             $html .= '</tr></thead><tbody>';
             $index = 0;

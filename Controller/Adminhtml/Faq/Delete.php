@@ -13,13 +13,13 @@ class Delete extends \GDW\Faqs\Controller\Adminhtml\Faq\AbstractData
             try {
                 $newData = $this->faqRepository->load($data['id']);
                 $newData->delete();
-                $this->messageManager->addSuccessMessage(__('La pregunta se eliminó correctamente'));
+                $this->messageManager->addSuccessMessage(__('The FAQ was correctly deleted'));
             } catch (\Exception $e) {
-                $this->messageManager->addException($e, __('Ocurrió un error'));
+                $this->messageManager->addException($e, __('An error occurred'));
             }
             return $rRedirect->setPath('*/grid/faq/');
         }else{
-            $this->messageManager->addErrorMessage(__('No se encontró el Id de la pregunta'));
+            $this->messageManager->addErrorMessage(__('FAQ Id not found'));
             return $rRedirect->setPath('*/grid/faq/');
         }
         

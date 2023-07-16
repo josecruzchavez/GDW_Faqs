@@ -10,16 +10,12 @@ class WidgetFaqs extends ProductFaqs implements BlockInterface
     
     public function getTypeDisplay()
     {
-        $type = 'current_product';
-        $typeData = $this->getData('type_display') ?? '';
-        return $typeData != '' ? $typeData : $type;
+        return $this->getData('type_display') ?? 'current_product';
     }
 
     public function getStyle()
     {
-        $style = 'style_none';
-        $styleData = $this->getData('style_display') ?? '';
-        return $styleData != '' ? $styleData : $style;
+        return $this->getData('style_display') ?? 'style_none';
     }
 
     public function hasFaqs()

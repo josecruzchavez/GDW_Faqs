@@ -117,10 +117,4 @@ class Faq extends AbstractModel implements FaqInterface, IdentityInterface
     {
         return $this->load($id);
     }
-
-    public function getByProduct($product_id)
-    {
-        /**/
-        return false;
-    }
 }

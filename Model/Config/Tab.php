@@ -7,7 +7,7 @@ class Tab
     {
         return [
             'tab-faqs'  =>  [
-                'title'         =>  'Faqs',
+                'title'         =>  'FAQs',
                 'type'          =>  'template',
                 'data'          =>  [
                     "type"      =>  "GDW\Faqs\Block\ProductFaqs",
