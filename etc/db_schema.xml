@@ -5,7 +5,7 @@ xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/et
         <column xsi:type="text" name="faq" nullable="false" comment="Ask"/>
         <column xsi:type="text" name="answer" nullable="false" comment="Answer"/>
         <column xsi:type="boolean" name="status" nullable="false" default="0" comment="Status"/>
-        <column xsi:type="text" name="order" nullable="false" comment="Order to display"/>
+        <column xsi:type="int" name="order" nullable="false" default="0" comment="Order to display"/>
         <column xsi:type="text" name="ident" nullable="true" comment="identifier to be used for future purposes"/>
         <column xsi:type="text" name="product_id" nullable="true" comment="null | id product"/>
         <column xsi:type="text" name="category_faq_id" nullable="true" comment="null | id faq category"/>
