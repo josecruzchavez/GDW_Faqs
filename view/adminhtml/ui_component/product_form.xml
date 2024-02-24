@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="gdw_faqs_fieldset">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Product Faqs</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+                <item name="sortOrder" xsi:type="number">1000</item>
+            </item>
+        </argument>
+        <insertListing name="gdw_product_faqs_items_listing">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="autoRender" xsi:type="boolean">true</item>
+                    <item name="ns" xsi:type="string">gdw_product_faqs_items_listing</item>
+                    <item name="externalProvider" xsi:type="string">gdw_product_faqs_items_listing.gdw_product_faqs_items_listing_data_source</item>
+                </item>
+            </argument>
+        </insertListing>
+    </fieldset>
+</form>

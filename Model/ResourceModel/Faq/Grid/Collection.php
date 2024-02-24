@@ -26,6 +26,17 @@ class Collection extends SearchResult
 
     protected function _initSelect()
     {
+        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+        $request = $objectManager->get('Magento\Framework\App\Request\Http');
+        $namespace = $request->getParam('namespace');
+            if($namespace == 'gdw_product_faqs_items_listing'){
+                $session = $objectManager->get('Magento\Framework\Session\Generic');
+                $productId = $session->getCurrentProductIdByFaqs() ?? null;
+                if($productId){
+                    $this->addFieldToFilter('product_id', $productId);
+                }
+            }
+
         parent::_initSelect();
 
         $this->getSelect()->joinLeft(

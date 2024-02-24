@@ -19,6 +19,7 @@
         <arguments>
             <argument name="collections" xsi:type="array">
                 <item name="gdw_faqs_items_listing_data_source" xsi:type="string">GDW\Faqs\Model\ResourceModel\Faq\Grid\Collection</item>
+                <item name="gdw_product_faqs_items_listing_data_source" xsi:type="string">GDW\Faqs\Model\ResourceModel\Faq\Grid\Collection</item>
             </argument>
         </arguments>
     </type>
