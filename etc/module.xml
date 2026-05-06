@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Module/etc/module.xsd">
-    <module name="GDW_Faqs" setup_version="1.0.2">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="GDW_Faqs" setup_version="1.0.5" schema_version="1.0.5">
         <sequence>
-            <module name="Magento_Catalog"/>
-            <module name="GDW_Core"/>
+            <module name="Magento_Catalog">
+            <module name="GDW_Core">
         </sequence>
     </module>
 </config>
