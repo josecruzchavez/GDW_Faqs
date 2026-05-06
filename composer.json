@@ -1,46 +1,47 @@
 {
-  "name": "gdw/faqs",
-  "description": "FAQs for Magento 2",
-  "type": "magento2-module",
-  "version": "1.0.4",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "José Cruz Chávez",
-      "email": "jcruz@gdw.mx",
-      "homepage": "https://gdw.mx",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "php": "^7.2||^8.0",
-    "gdw/core": "^2.0"
-  },
-  "minimum-stability": "dev",
-  "keywords": [
-    "fAQs",
-    "free",
-    "magento",
-    "magento2",
-    "tab",
-    "accordion", 
-    "products",
-    "widget",
-    "Frequently",
-    "Asked",
-    "Questions",
-    "schema",
-    "SEO",
-    "gestion digital web",
-    "gdw",
-    "jcruz"
-  ],
-  "autoload": {
-    "files": [
-      "registration.php"
+    "name": "gdw/faqs",
+    "description": "FAQs for Magento 2",
+    "type": "magento2-module",
+    "version": "1.0.6",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Jos\u00e9 Cruz Ch\u00e1vez",
+            "email": "jcruz@gdw.mx",
+            "homepage": "https://gdw.mx",
+            "role": "Developer"
+        }
     ],
-    "psr-4": {
-      "GDW\\Faqs\\": ""
+    "require": {
+        "php": ">=8.1 <8.4",
+        "gdw/core": "^4.0",
+        "magento/framework": ">=103.0.0 <105.0.0"
+    },
+    "minimum-stability": "dev",
+    "keywords": [
+        "fAQs",
+        "free",
+        "magento",
+        "magento2",
+        "tab",
+        "accordion",
+        "products",
+        "widget",
+        "Frequently",
+        "Asked",
+        "Questions",
+        "schema",
+        "SEO",
+        "gestion digital web",
+        "gdw",
+        "jcruz"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "GDW\\Faqs\\": ""
+        }
     }
-  }
 }
