@@ -7,7 +7,7 @@
 Este módulo tiene la finalidad de agregar Preguntas frecuentes (FAQs) a Magento 2.
 
 ## Compatibilidad
-✓ Magento 2.3.x, ✓ Magento 2.4.x
+✓ Magento 2.4.4+ (rama 4.4.x)
 
 
 ## Funciones destacadas
