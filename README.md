@@ -1,8 +1,9 @@
-![gdw_faqs](https://php.gdw.mx/github_assets/gdw_faqs/gdw_faqs_01.jpg)
+![gdw_faqs](https://medios.gdw.mx/github_assets/gdw_faqs/gdw_faqs_01.jpg)
 
 # GDW FAQs para Magento 2
+[![Latest Stable Version](https://img.shields.io/packagist/v/gdw/faqs?style=for-the-badge)](https://packagist.org/packages/gdw/faqs) [![PHP Version Require](https://img.shields.io/packagist/dependency-v/gdw/faqs/php?style=for-the-badge)](https://packagist.org/packages/gdw/faqs) [![Magento Framework Require](https://img.shields.io/packagist/dependency-v/gdw/faqs/magento%2Fframework?style=for-the-badge)](https://packagist.org/packages/gdw/faqs) [![License](https://img.shields.io/packagist/l/gdw/faqs?style=for-the-badge)](https://packagist.org/packages/gdw/faqs)
 
-[![Latest Stable Version](http://poser.pugx.org/gdw/faqs/v?style=for-the-badge)](https://packagist.org/packages/gdw/faqs) [![Total Downloads](http://poser.pugx.org/gdw/faqs/downloads?style=for-the-badge)](https://packagist.org/packages/gdw/faqs) [![PHP Version Require](http://poser.pugx.org/gdw/faqs/require/php?style=for-the-badge)](https://packagist.org/packages/gdw/faqs)
+
 
 Este módulo tiene la finalidad de agregar Preguntas frecuentes (FAQs) a Magento 2.
 
