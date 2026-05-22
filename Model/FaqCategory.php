@@ -20,7 +20,7 @@ class FaqCategory extends AbstractModel implements FaqCategoryInterface, Identit
     /* Heredada de AbstractModel */
     public function getIdentities(): array
     {
-        return [self::CACHE_TAG . '_' . $this->getIdCategory()];
+        return [self::CACHE_TAG . '_' . $this->getCategoryId()];
     }
 
     /* Heredada de AbstractModel */
