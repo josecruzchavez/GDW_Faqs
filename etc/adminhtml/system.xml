@@ -29,13 +29,5 @@
                 </field>
             </group>
         </section>
-        <section id="gdwcoremodulelist">
-            <group id="gdwfaqspath" translate="label" type="text" sortOrder="96" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>GDW FAQs</label>
-                <field id="gdwfaqsfieldinfo" type="label" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
-                    <frontend_model>GDW\Faqs\Block\Adminhtml\System\ModuleInfoFull</frontend_model>
-                </field>
-            </group>
-        </section>
     </system>
 </config>
