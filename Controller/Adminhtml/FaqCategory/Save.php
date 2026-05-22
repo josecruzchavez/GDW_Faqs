@@ -11,13 +11,13 @@ class Save extends \GDW\Faqs\Controller\Adminhtml\FaqCategory\AbstractData
         $data = $this->getRequest()->getParams();
 
         if(isset($data['type_action']) && $data['type_action'] == 'new_category'){
-            $newItem = $this->faqCategoryFactory->create();
-            $newItem->setData($data);
-            $newItem->save();
-            if($newItem){
+            try {
+                $newItem = $this->faqCategoryFactory->create();
+                $newItem->setData($data);
+                $newItem->save();
                 $this->messageManager->addSuccessMessage(__('FAQ Category was saved successfully'));
                 return $rRedirect->setPath('*/*/edit', ['category_id' => $newItem->getCategoryId(), '_current' => true]);
-            }else{
+            } catch (\Exception $e) {
                 $this->messageManager->addException($e, __('An error has occurred'));
                 return $rRedirect->setPath('*/*/create', ['_current' => true]);
             }
@@ -37,8 +37,6 @@ class Save extends \GDW\Faqs\Controller\Adminhtml\FaqCategory\AbstractData
             $this->messageManager->addErrorMessage(__('FAQ Category Id not found'));
             return $rRedirect->setPath('*/grid/category');
         }
-
-        return $rRedirect->setPath('*/*/create', ['_current' => true]);
     }
 
     protected function _isAllowed()

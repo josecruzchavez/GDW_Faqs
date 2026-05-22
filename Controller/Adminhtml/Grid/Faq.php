@@ -14,7 +14,7 @@ class Faq extends \Magento\Backend\App\Action
     {
         $this->pageFactory = $pageFactory;
         $this->faqFactory = $faqFactory;
-        return parent::__construct($context);
+        parent::__construct($context);
     }
 
     public function execute()
