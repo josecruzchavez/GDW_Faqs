@@ -7,6 +7,7 @@ use Magento\Framework\App\RequestInterface;
 class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {
 
+    protected $loadedData = [];
     protected $request;
     protected $faqCollectionFactory;
 
@@ -32,11 +33,12 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
     {
         $itemId = $this->request->getParam('id');
         if($itemId){
-            
-            if (isset($this->loadedData)) {
+
+            if (!empty($this->loadedData)) {
                 return $this->loadedData;
             }
             $items = $this->collection->getItems();
+            /** @var \GDW\Faqs\Model\Faq $page */
             foreach ($items as $page) {
                 $this->loadedData[$page->getId()] = $page->getData();
             }

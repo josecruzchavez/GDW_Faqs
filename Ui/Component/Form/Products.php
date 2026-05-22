@@ -31,6 +31,7 @@ class Products implements OptionSourceInterface
     protected function getProductTree()
     {
         if ($this->productTree === null) {
+            $ProductById = [];
             $collection = $this->productCollectionFactory->create();
             $collection->addAttributeToSelect(['name', 'sku', 'entity_id']);
             foreach ($collection as $product) {

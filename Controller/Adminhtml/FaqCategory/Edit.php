@@ -15,7 +15,7 @@ class Edit extends \GDW\Faqs\Controller\Adminhtml\FaqCategory\AbstractData
             return $rRedirect->setPath('*/grid/category/');
         } else {
             $resultPage->addBreadcrumb(__('Edit Data'), __('Edit Data'));
-            $resultPage->getConfig()->getTitle()->prepend(_('Edit'));
+            $resultPage->getConfig()->getTitle()->prepend(__('Edit'));
         }
         return $resultPage;
     }

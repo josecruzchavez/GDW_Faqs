@@ -6,6 +6,7 @@ use Magento\Framework\Event\Observer;
 use GDW\Core\Helper\Data as GdwHelper;
 use GDW\Faqs\Model\Config\Tab as TabConfig;
 use Magento\Framework\Event\ObserverInterface;
+use Magento\Framework\View\LayoutInterface;
  
 class Tab implements ObserverInterface
 {
@@ -33,7 +34,11 @@ class Tab implements ObserverInterface
         if($displayTab){
             $hasFaqs = $this->faqHelper->hasFaqsCurrentProduct();
             if($hasFaqs){
-                $layout = $observer->getLayout();
+                $event = $observer->getEvent();
+                $layout = $event->getData('layout');
+                if (!$layout instanceof LayoutInterface) {
+                    return;
+                }
                 $blocks = $layout->getAllBlocks();
                 $titleTab = $this->gdwHelper->getConfigValue('gdw/catalog_faqs/tab_title') ?? '';
                 foreach ($blocks as $key => $block) {

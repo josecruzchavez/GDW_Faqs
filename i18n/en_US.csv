@@ -1,0 +1,4 @@
+"Select Product","Select Product"
+"Select FAQ Category","Select FAQ Category"
+"This is an internal FAQ group identifier, not a real Magento product category. Manage groups in FAQs Category (menu: GDW FAQs > FAQs Category).","This is an internal FAQ group identifier, not a real Magento product category. Manage groups in FAQs Category (menu: GDW FAQs > FAQs Category)."
+"If you select a SKU, the FAQ will be related to that product. If you do not select any SKU, the FAQ will be displayed according to the FAQ Category assignment.","If you select a SKU, the FAQ will be related to that product. If you do not select any SKU, the FAQ will be displayed according to the FAQ Category assignment."

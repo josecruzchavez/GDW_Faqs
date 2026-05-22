@@ -109,6 +109,7 @@
             <settings>
                 <elementTmpl>ui/grid/filters/elements/ui-select</elementTmpl>
                 <label translate="true">Select Product</label>
+                <notice translate="true">If you select a SKU, the FAQ will be related to that product. If you do not select any SKU, the FAQ will be displayed according to the FAQ Category assignment.</notice>
                 <dataScope>product_id</dataScope>
                 <componentType>field</componentType>
                 <listens>
@@ -141,6 +142,7 @@
             <settings>
                 <elementTmpl>ui/grid/filters/elements/ui-select</elementTmpl>
                 <label translate="true">Select FAQ Category</label>
+                <notice translate="true">This is an internal FAQ group identifier, not a real Magento product category. Manage groups in FAQs Category (menu: GDW FAQs &gt; FAQs Category).</notice>
                 <dataScope>category_faq_id</dataScope>
                 <componentType>field</componentType>
                 <listens>
