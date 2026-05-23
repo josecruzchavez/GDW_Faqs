@@ -13,35 +13,35 @@ interface FaqInterface
     const PRODUCT_ID = 'product_id';
     const CATEGORY_FAQ_ID = 'category_faq_id';
 
-    public function getId();
+    public function getId(): mixed;
 
-    public function setId($id);
+    public function setId(mixed $id): FaqInterface;
 
-    public function getFaq();
+    public function getFaq(): mixed;
 
-    public function setFaq($faq);
+    public function setFaq(mixed $faq): FaqInterface;
 
-    public function getAnswer();
+    public function getAnswer(): mixed;
 
-    public function setAnswer($answer);
+    public function setAnswer(mixed $answer): FaqInterface;
 
-    public function getStatus();
+    public function getStatus(): mixed;
 
-    public function setStatus($status);
+    public function setStatus(mixed $status): FaqInterface;
 
-    public function getOrder();
+    public function getOrder(): mixed;
 
-    public function setOrder($order);
+    public function setOrder(mixed $order): FaqInterface;
 
-    public function getIdent();
+    public function getIdent(): mixed;
 
-    public function setIdent($ident);
+    public function setIdent(mixed $ident): FaqInterface;
 
-    public function getProductId();
+    public function getProductId(): mixed;
 
-    public function setProductId($productId);
+    public function setProductId(mixed $productId): FaqInterface;
 
-    public function getCategoryFaqId();
+    public function getCategoryFaqId(): mixed;
 
-    public function setCategoryFaqId($categoryFaqId);
+    public function setCategoryFaqId(mixed $categoryFaqId): FaqInterface;
 }

@@ -4,6 +4,9 @@ namespace GDW\Faqs\Model\ResourceModel\Faq\Grid;
 use Psr\Log\LoggerInterface as Logger;
 use Magento\Framework\Event\ManagerInterface as EventManager;
 use Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult;
+use Magento\Framework\App\ObjectManager;
+use Magento\Framework\App\RequestInterface;
+use Magento\Framework\Session\Generic;
 use Magento\Framework\Data\Collection\EntityFactoryInterface as EntityFactory;
 use Magento\Framework\Data\Collection\Db\FetchStrategyInterface as FetchStrategy;
 
@@ -26,16 +29,21 @@ class Collection extends SearchResult
 
     protected function _initSelect()
     {
-        $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-        $request = $objectManager->get('Magento\Framework\App\Request\Http');
-        $namespace = $request->getParam('namespace');
-            if($namespace == 'gdw_product_faqs_items_listing'){
-                $session = $objectManager->get('Magento\Framework\Session\Generic');
-                $productId = $session->getCurrentProductIdByFaqs() ?? null;
-                if($productId){
-                    $this->addFieldToFilter('product_id', $productId);
+        $objectManager = ObjectManager::getInstance();
+        $request = $objectManager->get(RequestInterface::class);
+
+        if ($request instanceof RequestInterface) {
+            $namespace = $request->getParam('namespace');
+            if ($namespace == 'gdw_product_faqs_items_listing') {
+                $session = $objectManager->get(Generic::class);
+                if ($session instanceof Generic) {
+                    $productId = $session->getData('current_product_id_by_faqs');
+                    if ((is_int($productId) || is_string($productId)) && (string) $productId !== '') {
+                        $this->addFieldToFilter('product_id', (string) $productId);
+                    }
                 }
             }
+        }
 
         parent::_initSelect();
 

@@ -3,7 +3,10 @@ namespace GDW\Faqs\Model\Config;
 
 class Tab
 {
-    public function getTabs()
+    /**
+     * @return array<string, array<string, mixed>>
+     */
+    public function getTabs(): array
     {
         return [
             'tab-faqs'  =>  [

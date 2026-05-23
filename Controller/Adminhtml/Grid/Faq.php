@@ -1,15 +1,20 @@
 <?php
 namespace GDW\Faqs\Controller\Adminhtml\Grid;
 
-class Faq extends \Magento\Backend\App\Action
+use GDW\Faqs\Model\FaqFactory;
+use Magento\Backend\App\Action;
+use Magento\Backend\App\Action\Context;
+use Magento\Framework\View\Result\PageFactory;
+
+class Faq extends Action
 {
-    protected $pageFactory;
-    protected $faqFactory;
+    protected PageFactory $pageFactory;
+    protected FaqFactory $faqFactory;
 
     public function __construct(
-        \Magento\Backend\App\Action\Context $context,
-        \Magento\Framework\View\Result\PageFactory $pageFactory,
-        \GDW\Faqs\Model\FaqFactory $faqFactory
+        Context $context,
+        PageFactory $pageFactory,
+        FaqFactory $faqFactory
     )
     {
         $this->pageFactory = $pageFactory;
@@ -20,7 +25,7 @@ class Faq extends \Magento\Backend\App\Action
     public function execute()
     {        
         $resultPage = $this->pageFactory->create();
-		$resultPage->getConfig()->getTitle()->prepend((__('FAQs Items')));
-		return $resultPage;
+        $resultPage->getConfig()->getTitle()->prepend((__('FAQs Items')));
+        return $resultPage;
     }
 }

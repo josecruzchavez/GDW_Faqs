@@ -14,7 +14,6 @@ class Edit extends \GDW\Faqs\Controller\Adminhtml\FaqCategory\AbstractData
             $this->messageManager->addErrorMessage(__('FAQ Category Id not found'));
             return $rRedirect->setPath('*/grid/category/');
         } else {
-            $resultPage->addBreadcrumb(__('Edit Data'), __('Edit Data'));
             $resultPage->getConfig()->getTitle()->prepend(__('Edit'));
         }
         return $resultPage;

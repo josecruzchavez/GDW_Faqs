@@ -6,7 +6,9 @@ use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 
 class Create extends Generic implements ButtonProviderInterface
 {
-
+    /**
+     * @return array<string, mixed>
+     */
     public function getButtonData()
     {
         $data = [
@@ -19,7 +21,7 @@ class Create extends Generic implements ButtonProviderInterface
         return $data;
     }
 
-    public function getNewUrl()
+    public function getNewUrl(): string
     {
         return $this->getUrl('*/faq/create', []);
     }

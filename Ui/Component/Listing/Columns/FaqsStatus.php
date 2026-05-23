@@ -7,6 +7,10 @@ use Magento\Framework\Data\OptionSourceInterface;
 class FaqsStatus extends Column implements OptionSourceInterface
 {
 
+    /**
+     * @param array<string, mixed> $dataSource
+     * @return array<string, mixed>
+     */
     public function prepareDataSource(array $dataSource)
     {
         $dataSource = parent::prepareDataSource($dataSource);
@@ -25,12 +29,18 @@ class FaqsStatus extends Column implements OptionSourceInterface
         return $dataSource;
     }
 
+    /**
+     * @return array<int, array{value:string, label:\Magento\Framework\Phrase}>
+     */
     public function toOptionArray()
     {
         return $this->getStatusesOptionArray();
     }
 
-    public function getStatuses()
+    /**
+     * @return array<int|string, \Magento\Framework\Phrase>
+     */
+    public function getStatuses(): array
     {
         return [
             '1' => __('Enable'),
@@ -38,11 +48,14 @@ class FaqsStatus extends Column implements OptionSourceInterface
         ];
     }
 
-    public function getStatusesOptionArray()
+    /**
+     * @return array<int, array{value:string, label:\Magento\Framework\Phrase}>
+     */
+    public function getStatusesOptionArray(): array
     {
         $result = [];
         foreach ($this->getStatuses() as $value => $label) {
-            $result[] = ['value' => $value, 'label' => $label];
+            $result[] = ['value' => (string) $value, 'label' => $label];
         }
         return $result;
     }

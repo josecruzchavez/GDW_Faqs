@@ -8,15 +8,15 @@ interface FaqCategoryInterface
     const NAME = 'name';
     const CATEGORY_STATUS = 'category_Status';
 
-    public function getCategoryId();
+    public function getCategoryId(): mixed;
 
-    public function setCategoryId($category_id);
+    public function setCategoryId(mixed $category_id): FaqCategoryInterface;
 
-    public function getName();
+    public function getName(): mixed;
 
-    public function setName($name);
+    public function setName(mixed $name): FaqCategoryInterface;
 
-    public function getCategoryStatus();
+    public function getCategoryStatus(): mixed;
 
-    public function setCategoryStatus($category_Status);
+    public function setCategoryStatus(mixed $category_Status): FaqCategoryInterface;
 }

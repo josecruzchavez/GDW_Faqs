@@ -7,8 +7,7 @@ use Magento\Framework\Exception\NoSuchEntityException;
 
 class Generic
 {
-
-    protected $context;
+    protected Context $context;
 
     public function __construct(
         Context $context
@@ -16,16 +15,20 @@ class Generic
         $this->context = $context;
     }
 
-    public function getFaqId()
+    public function getFaqId(): int|string|null
     {
         try {
-            return $this->context->getRequest()->getParam('id');
+            $faqId = $this->context->getRequest()->getParam('id');
+            return (is_int($faqId) || is_string($faqId)) ? $faqId : null;
         } catch (NoSuchEntityException $e) {
         }
         return null;
     }
 
-    public function getUrl($route = '', $params = [])
+    /**
+     * @param array<string, mixed> $params
+     */
+    public function getUrl(string $route = '', array $params = []): string
     {
         return $this->context->getUrlBuilder()->getUrl($route, $params);
     }

@@ -7,9 +7,10 @@ use Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\AbstractModifier;
 
 class FaqsFieldset extends AbstractModifier
 {
-    protected $backSession;
-    protected $meta = [];
-    protected $request;
+    protected BackendModelSession $backSession;
+    /** @var array<string, mixed> */
+    protected array $meta = [];
+    protected Http $request;
 
     public function __construct(
         BackendModelSession $backSession,
@@ -20,13 +21,21 @@ class FaqsFieldset extends AbstractModifier
     }
     
        
-    public function modifyData(array $data)
+    /**
+     * @param array<string, mixed> $data
+     * @return array<string, mixed>
+     */
+    public function modifyData(array $data): array
     {
         return $data;
     }
     
        
-    public function modifyMeta(array $meta)
+    /**
+     * @param array<string, mixed> $meta
+     * @return array<string, mixed>
+     */
+    public function modifyMeta(array $meta): array
     {
         $this->meta = $meta;
         $this->backSession->setCurrentProductIdByFaqs($this->request->getParam('id'));

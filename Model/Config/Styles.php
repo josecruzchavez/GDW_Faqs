@@ -3,6 +3,9 @@ namespace GDW\Faqs\Model\Config;
 
 class Styles implements \Magento\Framework\Option\ArrayInterface
 {
+    /**
+     * @return array<int, array{value:int, label:\Magento\Framework\Phrase}>
+     */
     public function toOptionArray()
     {
         return [
@@ -12,7 +15,10 @@ class Styles implements \Magento\Framework\Option\ArrayInterface
         ];
     }
 
-     public function toArray()
+     /**
+      * @return array<int, \Magento\Framework\Phrase>
+      */
+     public function toArray(): array
     {
         return [
             0 => __('Without Style'),

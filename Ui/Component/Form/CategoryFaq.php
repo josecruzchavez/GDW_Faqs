@@ -8,10 +8,11 @@ use GDW\Faqs\Model\ResourceModel\FaqCategory\CollectionFactory as CategoryFaqCol
 
 class CategoryFaq implements OptionSourceInterface
 {
-    protected $request;
-    protected $gdwHelper;
-    protected $dataTree = null;
-    protected $categoryFaqCollectionFactory;
+    protected RequestInterface $request;
+    protected GDWHelper $gdwHelper;
+    /** @var array<int, array{value:mixed, label:string}>|null */
+    protected ?array $dataTree = null;
+    protected CategoryFaqCollectionFactory $categoryFaqCollectionFactory;
 
     public function __construct(
         CategoryFaqCollectionFactory $categoryFaqCollectionFactory,
@@ -23,17 +24,26 @@ class CategoryFaq implements OptionSourceInterface
         $this->request = $request;
     }
 
+    /**
+     * @return array<int, array{value:mixed, label:string}>
+     */
     public function toOptionArray()
     {
         return $this->getDataTree();
     }
 
-    protected function getDataTree()
+    /**
+     * @return array<int, array{value:mixed, label:string}>
+     */
+    protected function getDataTree(): array
     {
         if ($this->dataTree === null) {
-            $DataById[] = [];
+            $DataById = [];
             $collection = $this->categoryFaqCollectionFactory->create();
             foreach ($collection as $data) {
+                if (!is_object($data) || !method_exists($data, 'getCategoryId') || !method_exists($data, 'getName')) {
+                    continue;
+                }
                 $dataId = $data->getCategoryId();
                 if (!isset($DataById[$dataId])) {
                     $DataById[$dataId] = ['value' => $dataId];

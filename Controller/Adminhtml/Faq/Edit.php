@@ -14,9 +14,14 @@ class Edit extends \GDW\Faqs\Controller\Adminhtml\Faq\AbstractData
             $this->messageManager->addErrorMessage(__('FAQ Id not found'));
             return $rRedirect->setPath('*/grid/faq/');
         } else {
-            $resultPage->addBreadcrumb(__('Edit Data'), __('Edit Data'));
+            if (!is_scalar($dataId) || !is_numeric((string) $dataId)) {
+                $this->messageManager->addErrorMessage(__('Invalid FAQ Id'));
+                return $rRedirect->setPath('*/grid/faq/');
+            }
+            $faqTitle = $this->faqRepository->getById((int) $dataId)->getFaq();
+            $faqTitleString = is_scalar($faqTitle) ? (string) $faqTitle : 'Edit';
             $resultPage->getConfig()->getTitle()->prepend(
-                $this->faqRepository->getById($dataId)->getFaq()
+                $faqTitleString
             );
         }
         return $resultPage;

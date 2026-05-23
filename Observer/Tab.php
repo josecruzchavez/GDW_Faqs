@@ -13,9 +13,9 @@ class Tab implements ObserverInterface
     const PARENT_BlOCK_NAME = 'product.info.details';
     const RENDERING_TEMPLATE = 'GDW_Faqs::tab/renderer.phtml';
 
-    private $tabs;
-    private $faqHelper;
-    private $gdwHelper;
+    private TabConfig $tabs;
+    private Data $faqHelper;
+    private GdwHelper $gdwHelper;
  
     public function __construct(
         Data $faqHelper,
@@ -31,9 +31,9 @@ class Tab implements ObserverInterface
     public function execute(Observer $observer)
     {
         $displayTab = $this->gdwHelper->getConfigValue('gdw/catalog_faqs/show_tab') ?? 0;
-        if($displayTab){
+        if ($displayTab) {
             $hasFaqs = $this->faqHelper->hasFaqsCurrentProduct();
-            if($hasFaqs){
+            if ($hasFaqs) {
                 $event = $observer->getEvent();
                 $layout = $event->getData('layout');
                 if (!$layout instanceof LayoutInterface) {

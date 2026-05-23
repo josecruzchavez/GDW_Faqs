@@ -15,13 +15,13 @@ abstract class AbstractData extends Action
 {
     const ACTION_RESOURCE = 'GDW_Faqs::faqdata';
 
-    protected $coreRegistry;
-    protected $faqFactory;
-    protected $faqRepository;
-    protected $faqCategoryFactory;
-    protected $resultPageFactory;
-    protected $resultForwardFactory;
-    protected $faqCategoryRepository;
+    protected Registry $coreRegistry;
+    protected FaqFactory $faqFactory;
+    protected Faq $faqRepository;
+    protected FaqCategoryFactory $faqCategoryFactory;
+    protected PageFactory $resultPageFactory;
+    protected ForwardFactory $resultForwardFactory;
+    protected FaqCategory $faqCategoryRepository;
 
     public function __construct(
         Registry $registry,
