@@ -5,9 +5,6 @@
 
 
 
-
-
-
 Este módulo tiene la finalidad de agregar Preguntas frecuentes (FAQs) a Magento 2.
 
 ## Compatibilidad
