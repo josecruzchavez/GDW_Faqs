@@ -82,6 +82,6 @@ Consulta la documentación del módulo en:
 
 ### Changelog
 
-Consulta el changelog del modulo en:
+Consulta el changelog del módulo en:
 
 - [https://docs.gdw.mx/modulos/gdw_faqs/changelog](https://docs.gdw.mx/modulos/gdw_faqs/changelog)
