@@ -18,8 +18,7 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         RequestInterface $request,
         CollectionFactory $faqCollectionFactory,
         array $meta = [],
-        array $data = [],
-        
+        array $data = []
     ) {
         $this->request = $request;
         $this->collection = $faqCollectionFactory->create();
