@@ -5,6 +5,7 @@
     <body>
         <referenceContainer name="content">
             <uiComponent name="gdw_faqs_category_form_create"/>
+            <block class="GDW\Core\Block\Adminhtml\View\PromotionalFooter" name="gdw_admin_footer" template="GDW_Core::common/promotional_footer.phtml" after="-"/>
         </referenceContainer>
     </body>
 </page>
